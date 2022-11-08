@@ -1,14 +1,15 @@
+import React from 'react';
 import { Edit, NumberInput, SimpleForm, TextInput } from 'react-admin';
 
-export const MenuEdit = () => (
+export const MenuEdit: React.FC = () => (
   <Edit>
     <SimpleForm>
-      <TextInput source="id" disabled />
-      <TextInput source="title" fullWidth />
-      <TextInput source="image" fullWidth />
-      <TextInput source="ingredients" fullWidth />
-      <NumberInput source="price" />
-      <NumberInput source="weight" />
+      <TextInput name="id" source="id" disabled />
+      <TextInput name="title" source="title" fullWidth />
+      <TextInput name="image" source="image" fullWidth />
+      <TextInput name="ingredients" source="ingredients" fullWidth />
+      <NumberInput name="price" source="price" />
+      <NumberInput name="weight" source="weight" />
     </SimpleForm>
   </Edit>
 );
